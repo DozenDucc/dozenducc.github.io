@@ -1,9 +1,9 @@
 :root {
-  --paper: #faf9f7;
-  --ink: #242529;
-  --muted: #777a80;
-  --link: #45536a;
-  --rule: #d8d9d8;
+  --paper: #1b2328;
+  --ink: #e2e6e5;
+  --muted: #9aa7ad;
+  --link: #abc1cb;
+  --rule: #3b484e;
   color: var(--ink);
   background: var(--paper);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
@@ -12,42 +12,45 @@
 
 * { box-sizing: border-box; }
 body { margin: 0; }
-a { color: var(--link); text-decoration-thickness: .055em; text-underline-offset: .14em; }
-a:hover { color: #1a2d50; }
+a { color: var(--link); text-decoration-thickness: .045em; text-underline-offset: .18em; }
+a:hover { color: #e2eff3; }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
-.skip-link { position: absolute; top: -4rem; left: 1rem; padding: .65rem .8rem; background: var(--ink); color: white; z-index: 5; }
+.skip-link { position: absolute; top: -4rem; left: 1rem; padding: .65rem .8rem; background: var(--ink); color: var(--paper); z-index: 5; }
 .skip-link:focus { top: 1rem; }
 
-.page { width: min(100% - 3rem, 46rem); margin: 0 auto; }
-.running-head { display: flex; justify-content: space-between; gap: 1rem; padding: 2.2rem 0 .85rem; border-bottom: 1px solid var(--rule); color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .8rem; letter-spacing: .025em; }
-.running-head span:first-child { color: var(--ink); font-weight: 600; }
+.page { display: grid; grid-template-columns: 9rem minmax(0, 39rem); column-gap: clamp(2rem, 7vw, 6.5rem); width: min(100% - 4rem, 62rem); margin: 0 auto; }
+.running-head { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: .45rem; padding-top: 6.4rem; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; line-height: 1.5; letter-spacing: .015em; }
+.running-head span:first-child { color: var(--ink); }
 
-main { padding: 4.6rem 0 5.5rem; }
-h1 { max-width: 18em; margin: 0 0 2.3rem; font-size: clamp(2rem, 4.8vw, 3rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.2; text-wrap: balance; }
-.prose p { margin: 0 0 1.35em; font-size: clamp(1.1rem, 1.7vw, 1.25rem); line-height: 1.72; text-wrap: pretty; }
-.prose p:first-child { font-size: clamp(1.1rem, 1.7vw, 1.25rem); line-height: 1.72; }
+main { grid-column: 2; grid-row: 1; min-width: 0; padding: 6rem 0 5.6rem; }
+h1 { margin: 0 0 2.6rem; font-size: clamp(2.15rem, 4vw, 2.8rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.19; text-wrap: balance; }
+.prose p { margin: 0 0 1.35em; font-size: 1.12rem; line-height: 1.7; text-wrap: pretty; }
 
-.bibliography { margin-top: 5.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
-.bibliography h2 { margin: 0 0 2rem; font-size: 1.4rem; font-weight: 400; }
+.bibliography { margin-top: 4.9rem; padding-top: 1.45rem; border-top: 1px solid var(--rule); }
+.bibliography h2 { margin: 0 0 2.3rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
 .bibliography ol { margin: 0; padding: 0; list-style: none; }
-.bibliography li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: .9rem; margin: 0 0 1.8rem; }
-.year { padding-top: .14rem; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; }
-.paper-title { color: var(--ink); font-size: 1.08rem; line-height: 1.43; text-decoration: none; }
+.bibliography li { display: grid; grid-template-columns: 2.8rem minmax(0, 1fr); gap: 1.1rem; margin: 0 0 1.9rem; }
+.year { padding-top: .15rem; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .74rem; }
+.paper-title { color: var(--ink); font-size: 1.06rem; line-height: 1.42; text-decoration: none; }
 .paper-title:hover { color: var(--link); text-decoration: underline; }
-.bibliography li p { margin: .35rem 0 0; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .82rem; line-height: 1.55; }
-.scholar-note { margin: 2.8rem 0 0; color: var(--muted); font-size: .98rem; }
+.bibliography li p { margin: .4rem 0 0; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; line-height: 1.55; }
+.scholar-note { margin: 2.5rem 0 0; color: var(--muted); font-size: .94rem; }
 
-footer { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .4rem 2rem; padding: 1.3rem 0 3rem; border-top: 1px solid var(--rule); }
-footer p { margin: 0; font-size: 1rem; }
-.elsewhere { display: flex; gap: 1rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; }
+footer { grid-column: 2; grid-row: 2; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; padding: 1.4rem 0 3rem; border-top: 1px solid var(--rule); }
+footer p { margin: 0; font-size: .96rem; }
+.elsewhere { display: flex; gap: 1.15rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .76rem; }
 
-@media (max-width: 600px) {
-  .page { width: min(100% - 2.4rem, 46rem); }
-  .running-head { padding-top: 1.5rem; }
-  main { padding: 3.7rem 0 4.4rem; }
-  h1 { margin-bottom: 1.8rem; }
+@media (max-width: 700px) {
+  .page { display: block; width: min(100% - 2.8rem, 39rem); }
+  .running-head { flex-direction: row; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 .8rem; border-bottom: 1px solid var(--rule); }
+  main { padding: 4rem 0 4.5rem; }
+  h1 { margin-bottom: 2rem; }
   .bibliography { margin-top: 4rem; }
-  .bibliography li { grid-template-columns: 1fr; gap: .22rem; }
+}
+
+@media (max-width: 440px) {
+  .prose p { font-size: 1.06rem; }
+  .bibliography li { grid-template-columns: 1fr; gap: .2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
