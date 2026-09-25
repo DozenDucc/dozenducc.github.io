@@ -8,8 +8,8 @@ A small, static site for GitHub Pages. The site lives in `index.html` and `style
 - Edit `styles.css` to change the visual style.
 - Changes pushed to the repository's `main` branch appear at `https://dozenducc.github.io/`.
 
-## Sources for the first draft
+## Sources
 
-- [Google Scholar profile](https://scholar.google.com/citations?user=xM0MASYAAAAJ) for the three listed works
+- [Google Scholar profile](https://scholar.google.com/citations?user=xM0MASYAAAAJ) for the original linked works; additional publication details were provided by Hanming Ye
 - [Waddle Labs on Y Combinator](https://www.ycombinator.com/companies/waddle-labs) for the company and founder description
 - [GitHub profile](https://github.com/DozenDucc) and [LinkedIn profile](https://www.linkedin.com/in/hanming-ye) for profile links

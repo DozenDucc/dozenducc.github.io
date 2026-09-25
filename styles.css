@@ -32,7 +32,7 @@ h1 { margin: 0 0 2.8rem; font-size: clamp(2rem, 3.8vw, 2.45rem); font-weight: 50
 .bibliography li { display: grid; grid-template-columns: 2.8rem minmax(0, 1fr); gap: 1.1rem; margin: 0 0 2rem; }
 .year { padding-top: .16rem; color: var(--muted); font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .69rem; }
 .paper-title { color: var(--ink); font-size: .98rem; font-weight: 500; line-height: 1.5; text-decoration: none; }
-.paper-title:hover { color: var(--link); text-decoration: underline; }
+.paper-title[href]:hover { color: var(--link); text-decoration: underline; }
 .bibliography li p { margin: .45rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.6; }
 .scholar-note { margin: 2.5rem 0 0; color: var(--muted); font-size: .85rem; }
 
