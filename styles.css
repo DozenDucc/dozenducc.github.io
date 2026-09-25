@@ -1,47 +1,47 @@
 :root {
-  --paper: #1b2328;
-  --ink: #e2e6e5;
-  --muted: #9aa7ad;
-  --link: #abc1cb;
-  --rule: #3b484e;
+  --paper: #171e23;
+  --ink: #dce2e4;
+  --muted: #91a0a8;
+  --link: #b5cbd5;
+  --rule: #344148;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
 }
 
 * { box-sizing: border-box; }
 body { margin: 0; }
-a { color: var(--link); text-decoration-thickness: .045em; text-underline-offset: .18em; }
+a { color: var(--link); text-decoration-color: #6f8996; text-decoration-thickness: 1px; text-underline-offset: .2em; }
 a:hover { color: #e2eff3; }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .skip-link { position: absolute; top: -4rem; left: 1rem; padding: .65rem .8rem; background: var(--ink); color: var(--paper); z-index: 5; }
 .skip-link:focus { top: 1rem; }
 
-.page { display: grid; grid-template-columns: 9rem minmax(0, 39rem); column-gap: clamp(2rem, 7vw, 6.5rem); width: min(100% - 4rem, 62rem); margin: 0 auto; }
-.running-head { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: .45rem; padding-top: 6.4rem; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; line-height: 1.5; letter-spacing: .015em; }
+.page { display: grid; grid-template-columns: 8.5rem minmax(0, 37rem); column-gap: clamp(2rem, 7vw, 6rem); width: min(100% - 4rem, 59rem); margin: 0 auto; }
+.running-head { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: .5rem; padding-top: 6.25rem; color: var(--muted); font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .68rem; line-height: 1.5; letter-spacing: .015em; }
 .running-head span:first-child { color: var(--ink); }
 
-main { grid-column: 2; grid-row: 1; min-width: 0; padding: 6rem 0 5.6rem; }
-h1 { margin: 0 0 2.6rem; font-size: clamp(2.15rem, 4vw, 2.8rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.19; text-wrap: balance; }
-.prose p { margin: 0 0 1.35em; font-size: 1.12rem; line-height: 1.7; text-wrap: pretty; }
+main { grid-column: 2; grid-row: 1; min-width: 0; padding: 6rem 0 5.4rem; }
+h1 { margin: 0 0 2.8rem; font-size: clamp(2rem, 3.8vw, 2.45rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.22; text-wrap: balance; }
+.prose p { margin: 0 0 1.45em; font-size: 1.04rem; line-height: 1.76; text-wrap: pretty; }
 
-.bibliography { margin-top: 4.9rem; padding-top: 1.45rem; border-top: 1px solid var(--rule); }
-.bibliography h2 { margin: 0 0 2.3rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
+.bibliography { margin-top: 4.6rem; padding-top: 1.45rem; border-top: 1px solid var(--rule); }
+.bibliography h2 { margin: 0 0 2.4rem; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
 .bibliography ol { margin: 0; padding: 0; list-style: none; }
-.bibliography li { display: grid; grid-template-columns: 2.8rem minmax(0, 1fr); gap: 1.1rem; margin: 0 0 1.9rem; }
-.year { padding-top: .15rem; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .74rem; }
-.paper-title { color: var(--ink); font-size: 1.06rem; line-height: 1.42; text-decoration: none; }
+.bibliography li { display: grid; grid-template-columns: 2.8rem minmax(0, 1fr); gap: 1.1rem; margin: 0 0 2rem; }
+.year { padding-top: .16rem; color: var(--muted); font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .69rem; }
+.paper-title { color: var(--ink); font-size: .98rem; font-weight: 500; line-height: 1.5; text-decoration: none; }
 .paper-title:hover { color: var(--link); text-decoration: underline; }
-.bibliography li p { margin: .4rem 0 0; color: var(--muted); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; line-height: 1.55; }
-.scholar-note { margin: 2.5rem 0 0; color: var(--muted); font-size: .94rem; }
+.bibliography li p { margin: .45rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.6; }
+.scholar-note { margin: 2.5rem 0 0; color: var(--muted); font-size: .85rem; }
 
 footer { grid-column: 2; grid-row: 2; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; padding: 1.4rem 0 3rem; border-top: 1px solid var(--rule); }
-footer p { margin: 0; font-size: .96rem; }
-.elsewhere { display: flex; gap: 1.15rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .76rem; }
+footer p { margin: 0; font-size: .82rem; }
+.elsewhere { display: flex; gap: 1.15rem; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .68rem; }
 
 @media (max-width: 700px) {
-  .page { display: block; width: min(100% - 2.8rem, 39rem); }
+  .page { display: block; width: min(100% - 2.8rem, 37rem); }
   .running-head { flex-direction: row; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 .8rem; border-bottom: 1px solid var(--rule); }
   main { padding: 4rem 0 4.5rem; }
   h1 { margin-bottom: 2rem; }
@@ -49,7 +49,7 @@ footer p { margin: 0; font-size: .96rem; }
 }
 
 @media (max-width: 440px) {
-  .prose p { font-size: 1.06rem; }
+  .prose p { font-size: 1rem; }
   .bibliography li { grid-template-columns: 1fr; gap: .2rem; }
 }
 
