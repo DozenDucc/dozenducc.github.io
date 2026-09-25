@@ -6,16 +6,12 @@
     <meta name="color-scheme" content="dark">
     <meta name="description" content="Hanming Ye — Waddle Labs, research, and publications.">
     <title>Hanming Ye</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23313b57'/%3E%3Cpath d='M16 18v28M48 18v28M16 32h32' stroke='white' stroke-width='7' fill='none'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css?v=11">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0e12'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23a8c7d6'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css?v=12">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to the writing</a>
     <div class="page">
-      <header class="running-head">
-        <span>research &amp; robotics</span>
-      </header>
-
       <main id="main">
         <article>
           <h1>Hanming Ye</h1>
@@ -68,7 +64,7 @@
                 <div>
                   <span class="paper-title">Steering Diffusion Policies with Value-Guided Denoising</span>
                   <p class="authors"><strong class="self">Hanming Ye</strong></p>
-                  <p class="venue">NeurIPS 2025, Workshop on Embodied World Models for Decision Making <a class="paper-link" href="https://openreview.net/forum?id=dtMBW9W5jo">paper</a></p>
+                  <p class="venue">NeurIPS 2025, Workshop on Embodied World Models for Decision Making <a class="paper-link" href="https://openreview.net/pdf?id=dtMBW9W5jo">paper</a></p>
                 </div>
               </li>
               <li>
@@ -85,10 +81,20 @@
         </article>
       </main>
 
-      <footer>
-        <p><a href="mailto:hanming@waddlelabs.ai">Email me</a>.</p>
+      <footer id="contact">
+        <p>You can reach me via <button class="email-reveal" type="button">email</button>.</p>
         <div class="elsewhere"><a href="https://github.com/DozenDucc">GitHub</a><a href="https://www.linkedin.com/in/hanming-ye">LinkedIn</a><a href="https://scholar.google.com/citations?user=xM0MASYAAAAJ">Scholar</a></div>
       </footer>
     </div>
+    <script>
+      document.querySelector('.email-reveal').addEventListener('click', (event) => {
+        const address = String.fromCharCode(104, 97, 110, 109, 105, 110, 103, 64, 119, 97, 100, 100, 108, 101, 108, 97, 98, 115, 46, 97, 105);
+        const link = document.createElement('a');
+        link.href = `mailto:${address}`;
+        link.textContent = address;
+        event.currentTarget.replaceWith(link);
+        link.focus();
+      });
+    </script>
   </body>
 </html>
