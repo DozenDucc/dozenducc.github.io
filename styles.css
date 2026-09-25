@@ -1,9 +1,9 @@
 :root {
-  --paper: #171e23;
-  --ink: #dce2e4;
-  --muted: #91a0a8;
-  --link: #b5cbd5;
-  --rule: #344148;
+  --paper: #192027;
+  --ink: #e0e5e8;
+  --muted: #9aa8b0;
+  --link: #b8d0da;
+  --rule: #394750;
   color: var(--ink);
   background: var(--paper);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -18,16 +18,17 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .skip-link { position: absolute; top: -4rem; left: 1rem; padding: .65rem .8rem; background: var(--ink); color: var(--paper); z-index: 5; }
 .skip-link:focus { top: 1rem; }
 
-.page { display: grid; grid-template-columns: 8.5rem minmax(0, 37rem); column-gap: clamp(2rem, 7vw, 6rem); width: min(100% - 4rem, 59rem); margin: 0 auto; }
-.running-head { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: .5rem; padding-top: 6.25rem; color: var(--muted); font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .68rem; line-height: 1.5; letter-spacing: .015em; }
+.page { width: min(100% - 4rem, 73rem); margin: 0 auto; }
+.running-head { display: flex; justify-content: space-between; gap: 2rem; padding-top: 2.4rem; color: var(--muted); font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .68rem; line-height: 1.5; letter-spacing: .015em; }
 .running-head span:first-child { color: var(--ink); }
 
-main { grid-column: 2; grid-row: 1; min-width: 0; padding: 6rem 0 5.4rem; }
-h1 { margin: 0 0 2.8rem; font-size: clamp(2rem, 3.8vw, 2.45rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.22; text-wrap: balance; }
+main, footer { width: min(calc(100% - clamp(12rem, 28vw, 24rem)), 38rem); margin-left: clamp(12rem, 28vw, 24rem); }
+main { min-width: 0; padding: 8.2rem 0 0; }
+h1 { margin: 0 0 2.8rem; font-size: clamp(1.9rem, 3.3vw, 2.2rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.25; text-wrap: balance; }
 .prose p { margin: 0 0 1.45em; font-size: 1.04rem; line-height: 1.76; text-wrap: pretty; }
 
-.bibliography { margin-top: 4.6rem; padding-top: 1.45rem; border-top: 1px solid var(--rule); }
-.bibliography h2 { margin: 0 0 2.4rem; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.bibliography { margin: 5.5rem 0 0 3.2rem; }
+.bibliography h2 { margin: 0 0 2.25rem; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .78rem; font-weight: 500; letter-spacing: .015em; }
 .bibliography ol { margin: 0; padding: 0; list-style: none; }
 .bibliography li { display: grid; grid-template-columns: 2.8rem minmax(0, 1fr); gap: 1.1rem; margin: 0 0 2rem; }
 .year { padding-top: .16rem; color: var(--muted); font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .69rem; }
@@ -35,23 +36,27 @@ h1 { margin: 0 0 2.8rem; font-size: clamp(2rem, 3.8vw, 2.45rem); font-weight: 50
 .paper-link { display: inline-block; margin-left: .45rem; padding: .04rem .3rem; border: 1px solid var(--rule); color: var(--link); font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .67rem; font-style: normal; line-height: 1.5; text-decoration: none; white-space: nowrap; }
 .paper-link:hover { border-color: var(--link); }
 .bibliography li p { margin: .45rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.6; }
+.bibliography li .self { color: var(--ink); font-weight: 700; }
 .bibliography li .venue { margin-top: .05rem; font-style: italic; }
 .scholar-note { margin: 2.5rem 0 0; color: var(--muted); font-size: .85rem; }
 
-footer { grid-column: 2; grid-row: 2; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; padding: 1.4rem 0 3rem; border-top: 1px solid var(--rule); }
+footer { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; padding: 6rem 0 3rem; }
 footer p { margin: 0; font-size: .82rem; }
 .elsewhere { display: flex; gap: 1.15rem; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .68rem; }
 
 @media (max-width: 700px) {
-  .page { display: block; width: min(100% - 2.8rem, 37rem); }
-  .running-head { flex-direction: row; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 .8rem; border-bottom: 1px solid var(--rule); }
-  main { padding: 4rem 0 4.5rem; }
+  .page { width: min(100% - 2.8rem, 37rem); }
+  .running-head { gap: 1rem; padding-top: 1.5rem; }
+  main, footer { width: 100%; margin-left: 0; }
+  main { padding-top: 5rem; }
   h1 { margin-bottom: 2rem; }
-  .bibliography { margin-top: 4rem; }
+  .bibliography { margin: 4.5rem 0 0 1.7rem; }
+  footer { padding-top: 4.5rem; }
 }
 
 @media (max-width: 440px) {
   .prose p { font-size: 1rem; }
+  .bibliography { margin-left: 0; }
   .bibliography li { grid-template-columns: 1fr; gap: .2rem; }
 }
 
