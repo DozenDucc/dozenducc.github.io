@@ -19,8 +19,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .skip-link:focus { top: 1rem; }
 
 .page { width: min(100% - 4rem, 38rem); margin: 0 auto; }
-main, footer { width: 100%; }
-main { min-width: 0; padding: 8.8rem 0 0; }
+main { width: 100%; min-width: 0; padding: 8.8rem 0 3rem; }
 h1 { margin: 0 0 2.4rem; font-size: clamp(1.75rem, 3vw, 1.95rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.25; text-wrap: balance; }
 .prose p { margin: 0 0 1.45em; font-size: 1.04rem; line-height: 1.76; text-wrap: pretty; }
 
@@ -37,20 +36,15 @@ h1 { margin: 0 0 2.4rem; font-size: clamp(1.75rem, 3vw, 1.95rem); font-weight: 5
 .bibliography li .venue { margin-top: .05rem; font-style: italic; }
 .bibliography li .award { margin-top: .05rem; color: var(--link); }
 
-footer { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; padding: 6rem 0 3rem; }
-footer p { margin: 0; font-size: .82rem; }
 .email-reveal { padding: 0; border: 0; background: none; color: var(--link); font: inherit; text-decoration: underline; text-decoration-color: #6f8996; text-decoration-thickness: 1px; text-underline-offset: .2em; cursor: pointer; }
 .email-reveal:hover { color: #e2eff3; }
 .email-reveal:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
-.elsewhere { display: flex; gap: 1.15rem; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .68rem; }
 
 @media (max-width: 700px) {
   .page { width: min(100% - 2.8rem, 37rem); }
-  main, footer { width: 100%; }
   main { padding-top: 5.5rem; }
   h1 { margin-bottom: 2rem; }
   .bibliography { margin: 4.5rem 0 0; }
-  footer { padding-top: 4.5rem; }
 }
 
 @media (max-width: 440px) {
